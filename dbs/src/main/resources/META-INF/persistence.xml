@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
+             version="3.2">
+  <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>enteties.Doporucil</class>
+    <class>enteties.Druh</class>
+    <class>enteties.DruhMasaze</class>
+    <class>enteties.Masaz</class>
+    <class>enteties.Objednavka</class>
+    <class>enteties.OficialniStranka</class>
+    <class>enteties.Osoba</class>
+    <class>enteties.Recenze</class>
+    <class>enteties.Zakaznik</class>
+    <class>enteties.Zamestnanec</class>
+    <class>enteties.ZamestnanecDelaMasaz</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <shared-cache-mode>NONE</shared-cache-mode>
+    <validation-mode>AUTO</validation-mode>
+    <properties>
+      <property name="jakarta.persistence.jdbc.driver"   value="org.postgresql.Driver"/>
+      <property name="jakarta.persistence.jdbc.url"      value=
+        "jdbc:postgresql://slon.felk.cvut.cz:5432/suleinat"/>
+      <property name="jakarta.persistence.jdbc.user"     value="suleinat"/>
+      <property name="jakarta.persistence.jdbc.password" value="suleinat_DBS25"/>
+      <property name="hibernate.dialect"      value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="validate"/>
+    </properties>
+
+  </persistence-unit>
+</persistence>
